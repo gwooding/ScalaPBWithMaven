@@ -1,19 +1,18 @@
 package test
 
 import mvnexample.Anotherexample
-import mvnexample.Example.Hello
+import mvnexample.Example
+import mvnexample.anotherexample
+import mvnexample.example
 
 object Main extends App {
 
-  val nestedJava = Hello.newBuilder.setHello(37)
-
+  val nestedJava = Example.Hello.newBuilder.setHello(37)
   val parentJava = Anotherexample.GoodBye.newBuilder().setHello(nestedJava).build
 
-  val parentJavaModified = parentJava.toBuilder.setHello(nestedJava.setHello(38)).build
+  val nestedScala = example.Hello(hello = 37)
+  val parentScala = anotherexample.GoodBye(Some(nestedScala))
 
-  val nested = mvnexample.example.Hello(hello = 37)
-
-  val parent = mvnexample.anotherexample.GoodBye(Some(nested))
-
-  val parentModified = parent.getHello.update(_.hello := 38)
+  val parentModifiedJava = parentJava.toBuilder.setHello(nestedJava.setHello(38)).build
+  val parentModifiedScala = parentScala.getHello.update(_.hello := 38)
 }
