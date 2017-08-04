@@ -100,12 +100,8 @@
                 <argument>--throw</argument> <!-- Important: otherwise scalapbc will kill the VM -->
                 <argument>--proto_path=${project.basedir}/src/main/protobuf</argument>
                 <argument>--proto_path=${project.basedir}/third_party</argument>
-                <argument>--scala_out=${project.build.directory}/generated-sources/protobuf</argument>
-                <!--
-                If you need to pass generator parameters to ScalaPB, then instead of the --scala_out line above,
-                have something like this: 
-                <argument>--scala_out=single_line_to_string,java_conversions:${project.build.directory}/generated-sources/protobuf</argument>
-                -->
+                <argument>--scala_out=java_conversions:${project.build.directory}/generated-sources/protobuf</argument>
+                <argument>--java_out=${project.build.directory}/generated-sources/protobuf</argument>
                 <argument>${project.basedir}/src/main/protobuf/example.proto</argument>
                 <argument>${project.basedir}/src/main/protobuf/anotherexample.proto</argument>
               </arguments>
