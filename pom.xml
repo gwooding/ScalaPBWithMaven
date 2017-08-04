@@ -102,8 +102,10 @@
                 <argument>--proto_path=${project.basedir}/third_party</argument>
                 <argument>--scala_out=java_conversions:${project.build.directory}/generated-sources/protobuf</argument>
                 <argument>--java_out=${project.build.directory}/generated-sources/protobuf</argument>
-                <argument>${project.basedir}/src/main/protobuf/example.proto</argument>
-                <argument>${project.basedir}/src/main/protobuf/anotherexample.proto</argument>
+                <argument>${project.basedir}/src/main/protobuf/bike.proto</argument>
+                <argument>${project.basedir}/src/main/protobuf/frame.proto</argument>
+                <argument>${project.basedir}/src/main/protobuf/metal.proto</argument>
+                <argument>${project.basedir}/src/main/protobuf/wheel.proto</argument>
               </arguments>
             </configuration>
           </execution>

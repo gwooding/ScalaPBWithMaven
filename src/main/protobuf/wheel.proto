@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package mvnexample;
+
+import "metal.proto";
+
+message Wheel {
+    Metal metal = 1;
+    int32 spokes = 2;
+}

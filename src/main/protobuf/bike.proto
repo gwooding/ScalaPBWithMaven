@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "scalapb/scalapb.proto";
+
+package mvnexample;
+
+import "wheel.proto";
+import "frame.proto";
+
+message Bike {
+  Wheel wheel = 1;
+  Frame frame = 2;
+}
+
